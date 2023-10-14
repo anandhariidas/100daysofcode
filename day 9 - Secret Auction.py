@@ -1,7 +1,4 @@
-from replit import clear
-from art import logo
-
-print(logo)
+from secret_auction_art import logo
 
 bids = {}
 bidding_finished = False
@@ -10,7 +7,6 @@ bidding_finished = False
 def find_highest_bidder(bidding_record):
     highest_bid = 0
     winner = ""
-    # bidding_record = {"Angela": 123, "James": 321}
     for bidder in bidding_record:
         bid_amount = bidding_record[bidder]
         if bid_amount > highest_bid:
@@ -27,6 +23,4 @@ while not bidding_finished:
     if should_continue == "no":
         bidding_finished = True
         find_highest_bidder(bids)
-    elif should_continue == "yes":
-        clear()
 
